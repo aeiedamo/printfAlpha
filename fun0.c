@@ -11,6 +11,7 @@ char ch = va_arg(para, int);
 
 buffer[ind++] = ch;
   prnt_buf(buffer, *ind);
+
 }
 
 int hand_str (char *forma, buf[], int *ind, va_list para)
