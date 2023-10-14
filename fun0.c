@@ -7,28 +7,25 @@
 int hand_char(buf[], va_list para)
 {
 char ch = va_arg(para, int);
-
 return (write_char (ch, buf));
 }
 
-int hand_str (char *forma, buf[], int *ind, va_list para)
+int hand_str (buf[], va_list para)
 {
-
 int length = 0, prntd_num;
 char *str = va_arg(para, char*);
 
 if (str == NULL)
-	return (0);
-
+	return (-1);
+UNUSED buf
 length = strlen(str);
 
-write (1, &str, length);
-
-return (length);
+return (write (1, &str, length));
 }
 
 int hand_percent(char buf[], int *ind)
 {
+UNUSED buf
 char per = '%';
-write (1, &per, 1)
+write (1, &per, 1);
 }
