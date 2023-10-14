@@ -28,14 +28,16 @@ va_start(para, format);
       
     else
     {
-  fs_prntd = handle_fs(format, int i, buffer, &index, para);
+      prnt_buf(buffer, &index);
+  //fs_prntd = handle_fs(format, int i, buffer, &index, para);
 
       prntd_char += fs_prntd;
     }
     
 ++i;
   }
-  // prnt_buf(buffer, &index);
+
+//prnt_buf(buffer, &index);
   
 return (prntd_char);
 }
