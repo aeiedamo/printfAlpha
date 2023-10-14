@@ -1,0 +1,14 @@
+#include "main.h"
+
+/**
+*
+*
+*/
+int hand_char(char *forma, buf[], int *ind, va_list para)
+{
+int prntd_char = 0;
+char ch = va_arg(para, int);
+
+buffer[ind++] = ch;
+  prnt_buf(buffer, *ind);
+}
