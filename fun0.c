@@ -4,7 +4,7 @@
 *
 *
 */
-int hand_char(buf[], va_list para)
+int hand_char(char buf[], va_list para)
 {
 char ch = va_arg(para, int);
 return (write_char (ch, buf));
