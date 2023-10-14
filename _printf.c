@@ -30,6 +30,7 @@ va_start(para, format);
     {
   fs_prntd = handle_fs(format, int i, buffer, &index, para);
 
+      prntd_char += fsprntd;
     }
     
 ++i;
