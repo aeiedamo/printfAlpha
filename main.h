@@ -19,4 +19,8 @@ char FS;
 int (*F) ()
 } HANDLE;
 
+int _printf(const char *format, ...);
+void prnt_buf (char buffer[], int *index);
+
+
 #endif
