@@ -28,7 +28,7 @@ va_start(para, format);
       
     else
     {
-  fs_prntd = hand_fs(format, buffer, &index, para);
+  fs_prntd = handle_fs(format, buffer, &index, para);
 
     }
     
