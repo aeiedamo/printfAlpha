@@ -16,7 +16,7 @@
 typedef struct format
 {
 char FS;
-int (*F) ()
+int (*F) (char *, buf[], int, va_list)
 } HANDLE;
 
 int _printf(const char *format, ...);
