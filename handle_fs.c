@@ -20,7 +20,7 @@ HANDLE arr =
 for (count = 0; count < funcs; count++)
 {
 if(arr[count].FS == form[n])
-  return (arr[count].F(form, n, buf[], ind, para));
+  return (arr[count].F(buf[], para));
 }
 
 return (0);
