@@ -1,41 +1,41 @@
 #include "main.h"
 
 /**
-* _printf - print string to standerd out put
+* _printf - print strings to standerd output
 *@format: string to be printed
-*@Return: num of char printed
+*@Return: num of char printed.
 */
 int _printf(const char *format, ...)
 {
-int prntd_char, index = 0, fs_prntd = 0;
+int prntd_char = 0, index = 0, fs_prntd = 0, i = 0;
 char buffer[BUF_LEN];
 va_list para;
+
 if (!format)
 return (0);
 
 va_start(para, format);
   
-  while (format && *format)
+  while (format[i] != '\0')
   {
-    if (*format != '%' && *format != '\0')
+    if (*format != '%')
     {
-      buffer[index++] = *format;
+      buffer[index++] = format[i];
       if (index == BUF_LEN)
-        prnt_buf(bufer, &index);
-      
+      prnt_buf(buffer, &index);
       ++prntd_char;
     }
       
     else
     {
   fs_prntd = hand_fs(format, buffer, &index, para);
-
     }
-
     
+ ++i;
   }
+  prnt_buf(buffer, &index);
   
-return (prntd_char)
+return (prntd_char);
 }
 
 /**
@@ -45,8 +45,7 @@ return (prntd_char)
   */
 void prnt_buf (char buffer[], int *index)
 {
-if(index > 0)
-  write(1, buffer, index)
-  
+if(*index > 0)
+  write(1, buffer, *index);
   *index = 0;
 }
