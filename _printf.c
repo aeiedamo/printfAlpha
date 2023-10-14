@@ -12,13 +12,13 @@ char buffer[BUF_LEN];
 va_list para;
 
 if (!format)
-return (0);
+return (-1);
 
 va_start(para, format);
-  
+
   while (format[i] != '\0')
   {
-    if (*format != '%')
+    if (format[i] != '%')
     {
       buffer[index++] = format[i];
       if (index == BUF_LEN)
@@ -29,18 +29,19 @@ va_start(para, format);
     else
     {
   fs_prntd = hand_fs(format, buffer, &index, para);
+
     }
     
- ++i;
+++i;
   }
-  prnt_buf(buffer, &index);
+  // prnt_buf(buffer, &index);
   
 return (prntd_char);
 }
 
 /**
   * prnt_buf - print buffer.
-  *@buffer[] : is container contains charecter that will be printed.
+  *@buffer : is container contains charecter that will be printed.
   *@index: index to handle buffer size
   */
 void prnt_buf (char buffer[], int *index)
