@@ -5,6 +5,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+#define BUF_LEN 1024
 typedef struct format
 {
   
