@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 #define BUF_LEN 1024
+#define UNUSED(x) (void)(x) /* tell that anything after unused will cast to void so that even if we didn't used parametes it compile fine
 
 /**
   * struct format - is strucure to handle
