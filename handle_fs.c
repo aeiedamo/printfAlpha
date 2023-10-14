@@ -14,7 +14,7 @@ int count = 0, funcs = 'num of funcs';
 HANDLE arr =
 {
 {'c', hand_char} {'%', handpercent} {'s', hand_str}
-{'d', hand_int}
+{'d', hand_int} {'i', hand_inti}
 };
 
 for (count = 0; count < funcs; count++)
@@ -23,4 +23,5 @@ if(arr[count].FS == form[n])
   return (arr[count].F(form, n, buf[], ind, para));
 }
 
+return (0);
 }
